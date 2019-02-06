@@ -56,14 +56,6 @@ for row in range(1,len(profit_losses)):
 
 
 #---------------------------------Print final---------------------------------#
-with open("textfile.txt", "a") as write_file:
-    print(f"Financial Analysis", file=write_file)
-    print(f"-----------------------------------------------------", file=write_file)
-    print(f"Total Months:", num_months, file=write_file)
-    print(f"Total Revenue: $", sum_pl, file=write_file)
-    print(f"Avereage Revenue Change: $", math.ceil(avg_pl_change*100)/100, file=write_file)
-    print(f"Greatest Increase in Revenue:", max_pl_change_date,"($", max_pl_change,")", file=write_file)
-    print(f"Greatest Decrease in Revenue:", min_pl_change_date,"($", min_pl_change,")", file=write_file)
     
 print("Financial Analysis")
 print("-----------------------------------------------------")
@@ -72,3 +64,15 @@ print("Total Revenue: $", sum_pl)
 print("Avereage Revenue Change: $", math.ceil(avg_pl_change*100)/100)
 print("Greatest Increase in Revenue:", max_pl_change_date,"($", max_pl_change,")")
 print("Greatest Decrease in Revenue:", min_pl_change_date,"($", min_pl_change,")")
+
+
+#---------------------------------write to text file---------------------------------#
+
+with open("textfile_budget.txt", "a") as write_file:
+    print(f"Financial Analysis", file=write_file)
+    print(f"-----------------------------------------------------", file=write_file)
+    print(f"Total Months:", num_months, file=write_file)
+    print(f"Total Revenue: $", sum_pl, file=write_file)
+    print(f"Avereage Revenue Change: $", math.ceil(avg_pl_change*100)/100, file=write_file)
+    print(f"Greatest Increase in Revenue:", max_pl_change_date,"($", max_pl_change,")", file=write_file)
+    print(f"Greatest Decrease in Revenue:", min_pl_change_date,"($", min_pl_change,")", file=write_file)
