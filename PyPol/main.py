@@ -1,3 +1,9 @@
+#-------------------------#
+# Holly Bergen            #
+# 06Feb2019               #
+# Election Analysis       #
+#-------------------------#
+
 import os
 import csv
 
@@ -32,7 +38,7 @@ with open(path, 'r') as csvfile:
             
 #The total number of votes each candidate won
 
-    #first save counts for each candidate as its own variable
+    #This loop saves counts for each candidate as its own variable
     counts = set(candidate)
     for name in counts:
         if name == "O'Tooley":
