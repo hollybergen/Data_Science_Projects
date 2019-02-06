@@ -8,7 +8,7 @@ import os
 import csv
 import math
 
-path = os.path.join('budget_data.csv')
+path = os.path.join(".", "PyBank", "budget_data.csv")
 with open(path, 'r') as csvfile:
     budgetreader = csv.reader(csvfile, delimiter = ',')
   

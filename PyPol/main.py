@@ -7,7 +7,7 @@
 import os
 import csv
 
-path = 'election_data.csv'
+path = os.path.join(".", "PyPol", "election_data.csv")
 with open(path, 'r') as csvfile:
     pollingreader = csv.reader(csvfile, delimiter = ',')
 
