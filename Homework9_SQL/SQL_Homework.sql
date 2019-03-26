@@ -207,3 +207,76 @@ ORDER BY COUNT(rental_id)DESC
 
 -- 7f. Write a query to display how much business, in dollars, each store brought in.
 
+SELECT * FROM sakila.store -- store_id, address_id
+SELECT * FROM sakila.inventory -- inventory_id, store_id
+SELECT * FROM sakila.rental -- rental_id, inventory_id
+SELECT * FROM sakila.payment -- payment_id, rental_id, amount
+
+SELECT s.store_id, sum(amount)
+FROM store s 
+INNER JOIN inventory i ON s.store_id = i.store_id
+INNER JOIN rental r ON i.inventory_id = r.inventory_id
+INNER JOIN payment p ON r.rental_id = p.rental_id
+GROUP BY s.store_id
+
+-- 7g. Write a query to display for each store its store ID, city, and country.
+
+SELECT * FROM sakila.country -- country_id
+SELECT * FROM sakila.city -- city_id, country_id
+SELECT * FROM sakila.address -- address_id, city_id
+SELECT * FROM sakila.store -- store_id, address_id
+
+SELECT store_id, city, country
+FROM country co
+INNER JOIN city ci ON co.country_id = ci.country_id
+INNER JOIN address a ON ci.city_id = a.city_id
+INNER JOIN store s ON a.address_id = s.address_id
+GROUP BY store_id
+
+-- 7h. List the top five genres in gross revenue in descending order. 
+-- (Hint: you may need to use the following tables: 
+-- category, film_category, inventory, payment, and rental.)
+
+SELECT * FROM sakila.category -- category_id, name(GENRE)
+SELECT * FROM sakila.film_category -- category_id, film_id
+SELECT * FROM sakila.inventory -- inventory_id, film_id, 
+SELECT * FROM sakila.rental -- rental_id, inventory_id
+SELECT * FROM sakila.payment -- payment_id, rental_id (AMOUNT)
+
+SELECT name, sum(amount)
+FROM category c
+INNER JOIN film_category fc ON c.category_id = fc.category_id
+INNER JOIN inventory i ON fc.film_id = i.film_id
+INNER JOIN rental r ON i.inventory_id = r.inventory_id
+INNER JOIN payment p ON r.rental_id = p.rental_id
+GROUP BY name
+ORDER BY amount DESC
+LIMIT 5
+
+-- 8a. In your new role as an executive, you would like to have an easy way of viewing the 
+-- Top five genres by gross revenue. Use the solution from the problem above to create a view. 
+-- If you haven't solved 7h, you can substitute another query to create a view.
+
+CREATE VIEW top_5_genres AS
+SELECT name, sum(amount)
+FROM category c
+INNER JOIN film_category fc ON c.category_id = fc.category_id
+INNER JOIN inventory i ON fc.film_id = i.film_id
+INNER JOIN rental r ON i.inventory_id = r.inventory_id
+INNER JOIN payment p ON r.rental_id = p.rental_id
+GROUP BY name
+ORDER BY amount DESC
+LIMIT 5
+
+-- 8b. How would you display the view that you created in 8a?
+
+SELECT * FROM top_5_genres
+
+-- 8c. You find that you no longer need the view top_five_genres. Write a query to delete it.
+
+DROP VIEW top_5_genres
+
+
+
+
+
