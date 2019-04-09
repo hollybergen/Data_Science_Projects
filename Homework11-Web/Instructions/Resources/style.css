@@ -1,0 +1,169 @@
+
+body {
+    background-color: rgb(230, 228, 228);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/*--------NAVIGATION BAR--------*/
+
+.container {
+    background-color: rgb(64, 197, 197) !important;
+    padding: 0px !important;
+    width: relative !important;
+}
+
+.navbar {
+    background-color: white ! important;
+    height: 80px !important;
+    border-bottom: 5px solid  #777;
+}
+
+.navbar .navbar-brand {
+    color: #FFF !important;
+    font-size: 28px !important;
+    background-color: rgb(64, 197, 197);
+    padding-left: 10px !important;
+}
+
+
+.navbar .navbar-brand:hover {
+    color: black !important;
+}
+
+.navbar-nav {
+    color:white !important;
+    background-color: rgb(64, 197, 197);
+}
+
+.navbar .navbar-nav li a {
+    color: white !important;
+}
+
+.navbar .navbar-nav li a:hover {
+    color: black !important;
+}
+.navbar-toggler.float-right {
+    float: right !important;
+    background-color: rgb(64, 197, 197) !important; 
+    color:white !important;
+}
+
+.navbar-toggler-icon {
+    color: white !important;
+    background-color: rgb(64, 197, 197) !important;
+}
+
+.navbar-nav .mr-auto.float-right {
+    float: right !important;
+}
+
+.collapse.navbar-collapse.float-right {
+    float: right !important;
+}
+
+.dropdown-menu {
+    color: white !important;
+    background-color: rgb(64, 197, 197) !important;
+}
+
+.dropdown-item {
+    color: white !important;
+    background-color: rgb(64, 197, 197) !important;
+}
+
+#navbar {
+    color: white;
+}
+
+
+
+
+/*--------CONTENT--------*/
+
+.content-container {
+    margin: 20px 20px;
+    min-height: 86.5vh;
+}
+
+.main-padding {
+    padding: 30px 40px 20px 40px;
+    margin: 20px 5px;
+    background-color: white;
+}
+
+.header {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(64, 197, 197);
+    font-weight: bold;
+}
+
+h1 {
+    color:  rgb(64, 197, 197);
+    font-size: 28pt;
+}
+
+h2 {
+    color:  rgb(64, 197, 197);
+    font-size: 20pt;
+}  
+
+.main-content {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.main-image {
+    float: left;
+    width: 70%;
+    padding: 20px;
+    padding-left: 0px;
+}
+
+.side-padding {
+    padding: 20px 30px;
+    padding-top: 40px;
+    margin: 20px 5px;
+    background-color: white;
+}
+
+.side-row, .main-row {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.side-image {
+    width: 100%;
+    padding: 0px;
+    margin: auto;
+    /* display: block; */
+}
+
+.col-xs-3 {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px;
+    border: 2px solid white;
+}
+
+.col-sm-12 {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 30px;
+}
+
+
+
+
+/*--------FOOTER--------*/
+
+.page-footer {
+    background-color: #777;
+    color:  white;
+    border: none;
+    margin: 0px;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 12px;
+    border-top: 5px solid rgb(64, 197, 197);
+}
