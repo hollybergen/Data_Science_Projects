@@ -2,6 +2,9 @@
 body {
     background-color: rgb(230, 228, 228);
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
 }
 
 
@@ -10,13 +13,14 @@ body {
 .container {
     background-color: rgb(64, 197, 197) !important;
     padding: 0px !important;
-    width: relative !important;
+    width: 100% !important;
 }
 
 .navbar {
     background-color: white ! important;
     height: 80px !important;
-    border-bottom: 5px solid  #777;
+    border-bottom: 2px solid rgb(189, 188, 188); 
+    width: 100% !important;
 }
 
 .navbar .navbar-brand {
@@ -121,10 +125,16 @@ h2 {
 }
 
 .side-padding {
-    padding: 20px 30px;
-    padding-top: 40px;
+    padding: 30px 40px 20px 40px;
+    padding-right: 30px;
     margin: 20px 5px;
+    margin-right: 40px;
     background-color: white;
+
+    /* padding: 20px 30px;
+    padding-top: 40px;
+    margin: 20px 5px !important;
+    background-color: white; */
 }
 
 .side-row, .main-row {
@@ -152,6 +162,9 @@ h2 {
     margin-bottom: 30px;
 }
 
+/* .col-lg-4,  .col-md-6, .col-xs-12 {
+    padding: 20px !important;
+} */
 
 
 
