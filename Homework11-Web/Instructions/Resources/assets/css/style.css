@@ -11,7 +11,7 @@ body {
 /*--------NAVIGATION BAR--------*/
 
 .container {
-    background-color: rgb(64, 197, 197) !important;
+    background-color: rgb(64, 197, 135) !important;
     padding: 0px !important;
     width: 100% !important;
 }
@@ -21,23 +21,24 @@ body {
     height: 80px !important;
     border-bottom: 2px solid rgb(189, 188, 188); 
     width: 100% !important;
+    z-index: 1;
+    position:relative;
 }
 
-.navbar .navbar-brand {
+.navbar-brand {
     color: #FFF !important;
     font-size: 28px !important;
-    background-color: rgb(64, 197, 197);
+    background-color: rgb(64, 197, 135);
     padding-left: 10px !important;
 }
 
-
-.navbar .navbar-brand:hover {
+.navbar-brand:hover {
     color: black !important;
 }
 
 .navbar-nav {
     color:white !important;
-    background-color: rgb(64, 197, 197);
+    background-color: rgb(64, 197, 135);
 }
 
 .navbar .navbar-nav li a {
@@ -49,13 +50,13 @@ body {
 }
 .navbar-toggler.float-right {
     float: right !important;
-    background-color: rgb(64, 197, 197) !important; 
+    background-color: rgb(64, 197, 135) !important; 
     color:white !important;
 }
 
 .navbar-toggler-icon {
     color: white !important;
-    background-color: rgb(64, 197, 197) !important;
+    background-color: rgb(64, 197, 135) !important;
 }
 
 .navbar-nav .mr-auto.float-right {
@@ -66,14 +67,14 @@ body {
     float: right !important;
 }
 
-.dropdown-menu {
+.dropdown-menu .pull-left {
     color: white !important;
-    background-color: rgb(64, 197, 197) !important;
+    background-color: rgb(64, 197, 135) !important;
 }
 
-.dropdown-item {
+.dropdown-item  {
     color: white !important;
-    background-color: rgb(64, 197, 197) !important;
+    background-color: rgb(64, 197, 135) !important;
 }
 
 #navbar {
@@ -98,17 +99,17 @@ body {
 
 .header {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgb(64, 197, 197);
+    color: rgb(64, 197, 135);
     font-weight: bold;
 }
 
 h1 {
-    color:  rgb(64, 197, 197);
+    color:  rgb(64, 197, 135);
     font-size: 28pt;
 }
 
 h2 {
-    color:  rgb(64, 197, 197);
+    color:  rgb(64, 197, 135);
     font-size: 20pt;
 }  
 
@@ -178,5 +179,5 @@ h2 {
     margin-top: 20px;
     padding: 10px;
     font-size: 12px;
-    border-top: 5px solid rgb(64, 197, 197);
+    border-top: 5px solid rgb(64, 197, 135);
 }

@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Lattitude Landing Page</title>
   </head>
@@ -16,27 +16,27 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a href="WebViz3.html" class="navbar-brand">Lattitude</a>
+            <a href="index.html" class="navbar-brand">Lattitude</a>
             <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbar9">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse" id="navbar9">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="Comparison.html">Comparison</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="//codeply.com">Codeply</a>
+                        <a class="nav-link" href="Data.html">Data</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Dropdown
+                          Plots
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Max Temperature</a>
+                          <a class="dropdown-item" href="#">Humidity</a>
+                          <a class="dropdown-item" href="#">Cloudiness</a>
+                          <a class="dropdown-item" href="#">Wind Speed</a>
                         </div>
                       </li>
                 </ul>
@@ -54,7 +54,7 @@
                   <h1 class="header">Summary: Latitude vs. X</h1>
                   <hr>
                   <section class="main-content">
-                    <img class="main-image" src="assets/images/Fig1.png" alt="max temperature vs latitude">
+                    <img class="main-image" src="assets/images/lat_vs_max_temp.png" alt="max temperature vs latitude">
                     <p>The purpose of this project was to analyze how weather changes as you get closer to or further from the equator. Weather parameters considered here are temperature, cloudiness, wind speed, and humidity.</p>
                     <p>To accomplish this objective, weather data were pulled from the <a href="https://openweathermap.org/api">OpenWeatherMap API</a> to assemble a dataset on over 500 cities across different latitudes. After assembling the dataset, python Matplotlib library was used to plot weather parameters vs. latitude. Finally, this visualization dashboard was created using HTML and CSS. This site provides the source data, visualizations, as well as explanations of how weather changes across latitudes on Earth.</p>
                   </section>
@@ -70,23 +70,23 @@
                     <div class="row side-row">
                       <div class="col-md-6 col-xs-3">
                         <a href="visualizations/temp.html">
-                          <img src="assets/images/Fig1.png" alt="max temperature vs latitude" class="side-image">
+                          <img src="assets/images/lat_vs_max_temp.png" alt="max temperature vs latitude" class="side-image">
                         </a>
                       </div>
                       <div class="col-md-6 col-xs-3">
                         <a href="visualizations/humidity.html">
-                          <img src="assets/images/Fig2.png" alt="humidity vs latitude" class="side-image">
+                          <img src="assets/images/lat_vs_humidity_fixed.png" alt="humidity vs latitude" class="side-image">
                         </a>
                       </div>
                       <div class="w-100"></div>
                       <div class="col-md-6 col-xs-3">
                         <a href="visualizations/cloudiness.html">
-                          <img src="assets/images/Fig3.png" alt="cloudiness vs latitude" class="side-image">
+                          <img src="assets/images/lat_vs_cloudiness.png" alt="cloudiness vs latitude" class="side-image">
                         </a>
                       </div>
                       <div class="col-md-6 col-xs-3">
                         <a href="visualizations/wind-speed.html">
-                          <img src="assets/images/Fig4.png" alt="wind speed vs latitude" class="side-image">
+                          <img src="assets/images/lat_vs_wind_speed.png" alt="wind speed vs latitude" class="side-image">
                         </a>
                       </div>
                     </div>
