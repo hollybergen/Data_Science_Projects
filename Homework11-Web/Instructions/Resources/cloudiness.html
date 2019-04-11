@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Lattitude Landing Page</title>
+    <title>Cloudiness</title>
   </head>
   <body>
 
@@ -51,15 +51,12 @@
             <!-- Main Section -->
             <main class="col-lg-8 col-md-6 col-xs-12">
                 <div class="main-padding">
-                  <h1 class="header">Summary: Latitude vs. X</h1>
+                  <h1 class="header">Cloudiness</h1>
                   <hr>
                   <section class="main-content">
-                    <img class="main-image" src="assets/images/lat_vs_max_temp.png" alt="max temperature vs latitude">
-                    <p>The purpose of this project was to analyze how weather changes as you get closer to or further from the equator. Weather parameters considered here are temperature, cloudiness, wind speed, and humidity.</p>
-                    <p>To accomplish this objective, weather data were pulled from the <a href="https://openweathermap.org/api">OpenWeatherMap API</a> to assemble a dataset on over 500 cities across different latitudes. After assembling the dataset, python Matplotlib library was used to plot weather parameters vs. latitude. Finally, this visualization dashboard was created using HTML and CSS. This site provides the source data, visualizations, as well as explanations of how weather changes across latitudes on Earth.</p>
-                    <hr>
-                    <p>See below for Latitude reference:</p>
-                    <p><img class = "centered-image" alt="Latitude Info" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Longitude_and_latitude_definition.gif/800px-Longitude_and_latitude_definition.gif">
+                    <img class="main-image large" src="assets/images/lat_vs_cloudiness.png" alt="max temperature vs latitude">
+                    <p>Cloudiness does not seem to vary significantly over latitudes, having widely distributed values 
+                      in all areas. However, it is interesting to see that a strong band of cities sits at 0, 80, and 100% cloudiness.</p>
                   </section>
                 </div>
             </main>
@@ -85,7 +82,7 @@
                       <div class="w-100"></div>
                       <div class="col-md-6 col-xs-3">
                         <a href="cloudiness.html">
-                          <img src="assets/images/lat_vs_cloudiness.png" alt="cloudiness vs latitude" class="side-image">
+                          <img src="assets/images/lat_vs_cloudiness.png" alt="cloudiness vs latitude" class="side-image active">
                         </a>
                       </div>
                       <div class="col-md-6 col-xs-3">
