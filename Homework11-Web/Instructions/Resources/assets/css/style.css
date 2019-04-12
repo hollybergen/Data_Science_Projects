@@ -6,6 +6,9 @@ body {
     padding: 0px;
     overflow-x: hidden;
 }
+.body-scroll {
+    overflow-x: scroll;
+}
 
 
 :target:active {
@@ -197,9 +200,9 @@ h2 {
     text-align: left; 
 }
 
-.scroll {
-    overflow: scroll;
-}
+/* .scroll {
+    overflow: hidden scroll;
+} */
 
 
 
