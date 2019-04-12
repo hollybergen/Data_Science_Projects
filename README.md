@@ -1,2 +1,2 @@
-# python-challenge
-Homework 3
+# Data Science
+Projects and assignments
