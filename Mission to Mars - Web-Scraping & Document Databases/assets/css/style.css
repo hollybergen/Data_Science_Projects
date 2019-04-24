@@ -1,11 +1,15 @@
 body {
     /* background-color: black; */
     background-image: url('../images/5-earthandmars.jpg')
-
 }
 
+h1 {
+    font-size: 80px !important;
+}
+
+
 .jumbotron {
-    color: rgb(104, 98, 98);
+    color: rgb(146, 140, 140);
     background-color: black;
     opacity: .8;
     text-align: center !important;
@@ -14,14 +18,19 @@ body {
     height: 340px !important;
     padding-top: 100px !important;  */
     height: 300px !important;
-    background-size: cover; 
+    /* background-size: cover;  */
     padding: 80px 0px;
-    margin: 0px;
+    /* padding-top: 120px; */
+    margin: 0px; */
 }
 
-h1 {
-    font-size: 80px !important;
-}
 .center {
-    padding-top: 110px; 
+    padding-top: 170px; 
+}
+
+.minitron {
+    color: rgb(204, 194, 194);
+    background-color: black;
+    opacity: .9;
+    text-align: center !important;
 }

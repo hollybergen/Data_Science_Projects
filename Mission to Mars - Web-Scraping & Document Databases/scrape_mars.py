@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
+# FLASK_APP=app.py flask run
 
 # Dependencies
 import requests
@@ -11,20 +12,19 @@ from IPython.display import Image
 from IPython.core.display import HTML, Image, display
 
 
-# Create beautiful soup object from html, create a function
-def scrape(url):
-    executable_path = {'executable_path': 'chromedriver.exe'}
-    browser = Browser('chrome', **executable_path, headless=False)
-    browser.visit(url)
-    html = browser.html
-    soup = BeautifulSoup(html, 'html.parser')
-    return soup
-
-
 def scraper():
-    
-    mars_dict = {}
-    
+
+    # Create beautiful soup object from html, create a function
+    def scrape(url):
+        executable_path = {'executable_path': 'chromedriver.exe'}
+        browser = Browser('chrome', **executable_path, headless=False)
+        browser.visit(url)
+        html = browser.html
+        soup = BeautifulSoup(html, 'html.parser')
+        return soup
+
+    # Create dictionary to store variables
+    mars = {}
     
     # Mars News #
     #------------------------------------------------#   
@@ -38,9 +38,8 @@ def scraper():
     latest_paragraph = soup.find("ul", class_="item_list").find("div",class_ = "article_teaser_body").text
     
     # Append to dictionary
-    mars_dict["latest_news"] = latest_news
-    mars_dict["latest_paragraph"] = latest_paragraph
-
+    mars["latest_news"] = latest_news
+    mars["latest_paragraph"] = latest_paragraph
 
 
     # Mars Image #
@@ -59,7 +58,7 @@ def scraper():
     featured_image_url = f'{url_base}{image_url}'
     
     # Append to dictionary
-    mars_dict["featured_image_url"] = featured_image_url
+    mars["featured_image_url"] = featured_image_url
 
     
 
@@ -76,7 +75,7 @@ def scraper():
     mars_weather = (twitter_soup.find("div", class_="js-tweet-text-container").find("p", class_="TweetTextSize TweetTextSize--normal js-tweet-text tweet-text").text)
     
     # Append to dictionary
-    mars_dict["mars_weather"] = mars_weather
+    mars["mars_weather"] = mars_weather
     
 
 
@@ -106,7 +105,7 @@ def scraper():
     mars_table = mars_html_table.replace('\n', ' ')
 
     # Append to dictionary
-    mars_dict["mars_table"] = mars_table
+    mars["mars_table"] = mars_table
         
 
 
@@ -135,16 +134,16 @@ def scraper():
         scraped = scrape(full_url)
         img_url = scraped.find("div", class_="downloads").find("li").a["href"]
         title = (i.find(class_="description").h3.text).replace(" Enhanced", "")
-        hemi_dicts.append({"Title": title, "Image Url":img_url})
+        hemi_dicts.append({"title": title, "img_url":img_url})
 
         
     # Append to dictionary
-    mars_dict["hemi_dicts"] = hemi_dicts
+    mars["hemi_dicts"] = hemi_dicts
     
-    return mars_dict
-    
+    # Return results
+    return mars
 
-
-
+    # Quit browser
+    browser.quit()
 
 

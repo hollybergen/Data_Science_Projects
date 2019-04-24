@@ -5,7 +5,7 @@ import scrape_mars
 
 # create instance of Flask app
 app = Flask(__name__)
-app.config["MARS_MONGO"] = "mongodb://localhost:27017/myDatabase"
+app.config["MONGO_URI"] = "mongodb://localhost:27017/myDatabase"
 
 # Use flask_pymongo to set up mongo connection
 mongo = PyMongo(app)
@@ -29,10 +29,20 @@ def home():
 # Route that will trigger scrape functions
 @app.route("/scrape")
 
-def scrape():
+def scraper():
 
     # Run scraped functions
-    mars = mission_to_mars.scraper()
+    mars = scrape_mars.scraper()
+
+    # Store results into dictionary
+    mars_dict = {
+        "latest_news": mars["latest_news"],
+        "latest_paragraph": mars["latest_paragraph"],
+        "featured_image_url": mars["featured_image_url"],
+        "mars_weather": mars["mars_weather"],
+        "mars_table": mars["mars_table"],
+        "hemi_dicts": mars["hemi_dicts"]
+    }
 
     # Insert mars_dict into database
     mongo.db.collection.insert_one(mars_dict)

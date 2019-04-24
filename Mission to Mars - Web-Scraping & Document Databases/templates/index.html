@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <style>
+      body {
+      background-image: url('https://media1.s-nbcnews.com/i/MSNBC/Components/Video/201606/a_debunker_scott_NASA_Mars_Mission_160601.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;  
+    }
+
+      h1 {
+          font-size: 80px !important;
+      }
+
+      .jumbotron {
+          color: rgb(146, 140, 140);
+          background-color: black;
+          opacity: .8;
+          text-align: center !important;
+          height: 300px !important;
+          padding: 80px 0px;
+          margin: 0px; 
+      }
+
+      .center {
+          padding-top: 170px; 
+      }
+
+      .minitron {
+          color: rgb(204, 194, 194);
+          background-color: black;
+          opacity: .8;
+          text-align: center !important;
+          margin: 20px;
+      }
+    
+      .background-color {
+        background-color: black;
+        opacity: .8;
+      }
+
+      .solid {
+        color: rgb(204, 194, 194);
+        background-color: black;
+      }
+
+      /* .header{
+        border-color: rgb(204, 194, 194) solid 2px;
+
+      } */
+    
+    </style>
+
+    <title>Mission to Mars</title>
+  </head>
+  <body>
+
+    <div class="container">
+        <div class="center row">
+            <div class="jumbotron col-lg-12 col-md-12 col-sm-12">
+                <h1>Mission to Mars</h1>
+                <p class="btn btn-outline-secondary"><a class = btn href="/scrape" role="button">Click to scrape Mars data!</a></p>
+            </div>
+        </div>
+    </div>
+
+    {% if mars.latest_news %}
+    <div class="container-fluid">
+      <div class="row news-weather">
+        <div class="col-md-6 col-xs-12 left">
+          <div class="minitron card news">
+            <h3 class="card-header header">Latest Mars News</h3>
+            <div class="card-body">
+              <h5 class="card-title header">{{ mars["latest_news"] }}</h5>
+              <p class="card-text">{{ mars["latest_paragraph"] }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xs-12 right">
+          <div class="minitron current-weather card">
+            <h3 class="card-header header weather-header">Current Weather on Mars</h3>
+            <p class="card-text">{{ mars["mars_weather"] }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row feature-fact">
+        <div class="col-md-6 col-xs-12 left">
+          <div class="minitron featured-image card">
+            <h3 class="card-header header">Featured Mars Image</h3>
+            <img class="solid card-img-bottom" src={{ mars["featured_image_url"] }} alt="Featured Mars Image">
+          </div>
+        </div>
+        <div class="col-md-6 col-xs-12 right">
+          <div class="minitron mars-facts card">
+            <h3 class="background-color card-header header">Mars Facts</h3>
+            <div class="background-color table-responsive">
+              <table class="background-color table table-striped table-hover table-sm">
+                {{ mars.mars_table | safe }}
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="minitron row hemispheres">
+            <h3 class="header-hemispheres">Mars Hemispheres</h3>
+            {% for item in mars["hemi_dicts"] %}
+          
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                  <div class="card card-hemispheres"> 
+                    <div class="card-body card-body-hemisphere">
+                      <img class="card-img-top" src={{ item.img_url }} alt="Mars hemisphere image">
+                      <h5 class="card-title hemisphere-title">{{ item.title }}</h5>
+                    </div>
+                  </div>
+                </div>
+           
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
