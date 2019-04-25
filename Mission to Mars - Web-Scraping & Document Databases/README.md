@@ -3,7 +3,8 @@ A web application that scrapes various websites for data related to the Mission 
 
 ## Step 1 - Scraping ## 
 
-* Please refer to [mission_to_mars.ipynb](https://github.com/hollybergen/Data_Science_Projects/blob/master/Mission%20to%20Mars%20-%20Web-Scraping%20%26%20Document%20Databases/mission_to_mars.ipynb); (Jupyter Notebook file that outlines all the scraping) 
+* [mission_to_mars.ipynb](https://github.com/hollybergen/Data_Science_Projects/blob/master/Mission%20to%20Mars%20-%20Web-Scraping%20%26%20Document%20Databases/mission_to_mars.ipynb) 
+ * Jupyter Notebook file that outlines all the scraping 
 
 **Python libraries used:** BeautifulSoup, Pandas, and Splinter
 
