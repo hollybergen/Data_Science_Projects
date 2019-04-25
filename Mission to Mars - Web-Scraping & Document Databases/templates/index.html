@@ -11,36 +11,42 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 
     <style>
+
       body {
-      background-image: url('https://media1.s-nbcnews.com/i/MSNBC/Components/Video/201606/a_debunker_scott_NASA_Mars_Mission_160601.jpg');
-      background-repeat: no-repeat;
-      background-attachment: fixed;  
+        background-image: url('https://media1.s-nbcnews.com/i/MSNBC/Components/Video/201606/a_debunker_scott_NASA_Mars_Mission_160601.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
     }
 
       h1 {
-          font-size: 80px !important;
+        font-size: 80px !important;
       }
 
       .jumbotron {
-          color: rgb(146, 140, 140);
-          background-color: black;
-          opacity: .8;
-          text-align: center !important;
-          height: 300px !important;
-          padding: 80px 0px;
-          margin: 0px; 
+        color: rgb(146, 140, 140);
+        background-color: black;
+        opacity: .8;
+        text-align: center !important;
+        height: 300px !important;
+        padding: 80px 0px;
+        margin: 0px; 
       }
 
       .center {
-          padding-top: 170px; 
+        padding-top: 170px; 
+      }
+
+      .container-fluid, .row {
+        margin: 0px;
+        padding: 0px;
       }
 
       .minitron {
-          color: rgb(204, 194, 194);
-          background-color: black;
-          opacity: .8;
-          text-align: center !important;
-          margin: 20px;
+        color: rgb(204, 194, 194);
+        background-color: black;
+        opacity: .8;
+        text-align: center !important;
+        margin: 20px;
       }
     
       .background-color {
@@ -52,9 +58,19 @@
         background-color: black;
       }
 
-      
+      /* .card {
+        margin: 0px;
+        padding: 0px 2%;
+      } */
+
       .card-img-bottom, .table-responsive {
         margin-top: 20px;
+      }
+
+      .card-body-hemisphere {
+        border: 1px solid rgb(200, 200, 200);
+        padding: 2px;
+        background: #fff;
       }
 
       .table-div {
@@ -62,29 +78,26 @@
       }
 
       .hemispheres {
-        margin-top: 50px;
+        margin-top: 10px;
         margin-left: 15px;
         margin-right: 15px;
-        margin-bottom: 40px;
+        margin-bottom: 0px;
+        text-align: center;
       }
       .card-hemispheres {
-        padding: 15px;
-        margin: 0px;
-        width: 100%;
+        padding: 0px;
+        margin: 15px;
+        width: 95%;
         display: block;
-        margin: auto;
+        /* margin: auto; */
       }
       .header-hemispheres {
         text-align: center;
         color: #FFF; 
         text-shadow: #000 2px 2px 3px;
-        padding-bottom: 20px;
+        /* padding-bottom: 20px; */
       }
-      .card-body-hemisphere {
-        border: 1px solid rgb(200, 200, 200);
-        padding: 2px;
-        background: #fff;
-      }
+
       .hemisphere-title {
         margin-left: 10px;
       }
@@ -149,18 +162,23 @@
     <div class="container-fluid">
         <div class="background-color row hemispheres">
             <h3 class="header-hemispheres">Mars Hemispheres</h3>
-            {% for item in mars["hemi_dicts"] %}
-          
-                <div class="col-lg-6 col-md-6 col-xs-12">
-                  <div class="card card-hemispheres"> 
-                    <div class="card-body card-body-hemisphere">
-                      <img class="card-img-top" src={{ item.img_url }} alt="Mars hemisphere image">
-                      <h5 class="card-title hemisphere-title">{{ item.title }}</h5>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="background-color row hemispheres">
+            <h3 class="header-hemispheres"></h3>
+                {% for item in mars["hemi_dicts"] %}
+              
+                    <div class="col-lg-6 col-md-6 col-xs-12">
+                      <div class="card card-hemispheres"> 
+                        <div class="card-body card-body-hemisphere">
+                          <img class="card-img-top" src={{ item.img_url }} alt="Mars hemisphere image">
+                          <h5 class="card-title hemisphere-title">{{ item.title }}</h5>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-           
-            {% endfor %}
+                {% endfor %}
         </div>
     </div>
     {% endif %}
