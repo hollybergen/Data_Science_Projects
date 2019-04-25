@@ -49,14 +49,45 @@
       }
 
       .solid {
-        color: rgb(204, 194, 194);
         background-color: black;
       }
 
-      /* .header{
-        border-color: rgb(204, 194, 194) solid 2px;
+      
+      .card-img-bottom, .table-responsive {
+        margin-top: 20px;
+      }
 
-      } */
+      .table-div {
+        padding: 20px;
+      }
+
+      .hemispheres {
+        margin-top: 50px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 40px;
+      }
+      .card-hemispheres {
+        padding: 15px;
+        margin: 0px;
+        width: 100%;
+        display: block;
+        margin: auto;
+      }
+      .header-hemispheres {
+        text-align: center;
+        color: #FFF; 
+        text-shadow: #000 2px 2px 3px;
+        padding-bottom: 20px;
+      }
+      .card-body-hemisphere {
+        border: 1px solid rgb(200, 200, 200);
+        padding: 2px;
+        background: #fff;
+      }
+      .hemisphere-title {
+        margin-left: 10px;
+      }
     
     </style>
 
@@ -105,7 +136,7 @@
         <div class="col-md-6 col-xs-12 right">
           <div class="minitron mars-facts card">
             <h3 class="background-color card-header header">Mars Facts</h3>
-            <div class="background-color table-responsive">
+            <div class="background-color table-responsive table-div">
               <table class="background-color table table-striped table-hover table-sm">
                 {{ mars.mars_table | safe }}
               </table>
@@ -116,7 +147,7 @@
     </div>
 
     <div class="container-fluid">
-        <div class="minitron row hemispheres">
+        <div class="background-color row hemispheres">
             <h3 class="header-hemispheres">Mars Hemispheres</h3>
             {% for item in mars["hemi_dicts"] %}
           
