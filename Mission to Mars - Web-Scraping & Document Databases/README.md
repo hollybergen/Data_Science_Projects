@@ -24,3 +24,5 @@ A web application that scrapes various websites for data related to the Mission 
   * A template HTML file that display all data in the appropriate HTML elements.
 
 ## Webpage Screenshots ##
+
+![](https://github.com/hollybergen/Data_Science_Projects/blob/master/Mission%20to%20Mars%20-%20Web-Scraping%20%26%20Document%20Databases/assets/images/Screenshot1.JPG)
