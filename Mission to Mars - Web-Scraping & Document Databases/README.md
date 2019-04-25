@@ -6,11 +6,11 @@ A web application that scrapes various websites for data related to the Mission 
 
 **Python libraries used:** BeautifulSoup, Pandas, and Splinter
 
-* Scrape latest news title and paragraph text from the NASA Mars News Site.
-* Scrape the image url for the current featured Mars Image from JPL Featured Space Image.
-* Scrape the latest Mars weather tweet from the Mars Weather twitter account
-* Scrape Mars metrics (e.g. diameter, mass) from the Mars Facts webpage.
-* Scrape Mars hemispheres images and names from the USGS Astrogeology site.
+* Scrape latest news title and paragraph text from the [NASA Mars News Site](https://mars.nasa.gov/news/)
+* Scrape the image url for the current featured Mars Image from [JPL Featured Space Image](https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars)
+* Scrape the latest Mars weather tweet from the [Mars Weather twitter account](https://twitter.com/marswxreport?lang=en)
+* Scrape Mars metrics (e.g. diameter, mass) from the [Mars Facts webpage](http://space-facts.com/mars/)
+* Scrape Mars hemispheres images and names from the [USGS Astrogeology site](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars) 
 
 ## Step 2 - MongoDB and Flask Application ##
 
