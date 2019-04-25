@@ -14,8 +14,11 @@ A web application that scrapes various websites for data related to the Mission 
 
 ## Step 2 - MongoDB and Flask Application ##
 
-* [scrape_mars.py]( ) declares a function called scrape that executes all the above scraping and returns the scraped data.
-* [app.py]( ) creates an app route called /scrape that calls the scrape function and store data in Mongo database; creates a root route / that queries the Mongo database and pass the mars data into an HTML template to display the data.
-* [index.html: a template HTML file that display all data in the appropriate HTML elements.
+* [scrape_mars.py](https://github.com/hollybergen/Data_Science_Projects/blob/master/Mission%20to%20Mars%20-%20Web-Scraping%20%26%20Document%20Databases/scrape_mars.py) 
+  * Declares a function called scrape that executes all the above scraping and returns the scraped data.
+* [app.py](https://github.com/hollybergen/Data_Science_Projects/blob/master/Mission%20to%20Mars%20-%20Web-Scraping%20%26%20Document%20Databases/app.py) 
+  * Creates an app route called /scrape that calls the scrape function and store data in Mongo database; creates a root route / that queries the Mongo database and pass the mars data into an HTML template to display the data.
+* [index.html](https://github.com/hollybergen/Data_Science_Projects/blob/master/Mission%20to%20Mars%20-%20Web-Scraping%20%26%20Document%20Databases/templates/index.html) 
+  * A template HTML file that display all data in the appropriate HTML elements.
 
 ## Webpage Screenshots ##
