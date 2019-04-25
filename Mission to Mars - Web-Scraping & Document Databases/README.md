@@ -26,3 +26,7 @@ A web application that scrapes various websites for data related to the Mission 
 ## Webpage Screenshots ##
 
 ![](https://github.com/hollybergen/Data_Science_Projects/blob/master/Mission%20to%20Mars%20-%20Web-Scraping%20%26%20Document%20Databases/assets/images/Screenshot1.JPG)
+<br>
+![](https://github.com/hollybergen/Data_Science_Projects/blob/master/Mission%20to%20Mars%20-%20Web-Scraping%20%26%20Document%20Databases/assets/images/Screenshot2.JPG
+<br>
+![](https://github.com/hollybergen/Data_Science_Projects/blob/master/Mission%20to%20Mars%20-%20Web-Scraping%20%26%20Document%20Databases/assets/images/Screenshot3.JPG)
