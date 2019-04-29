@@ -29,6 +29,7 @@ body {
 
 /* The wrapper contains all of the page's content besides the footer, 
 which is pushed to the bottom of the page */
+
 .wrapper {
   position: relative;
   min-height: 100%;
@@ -114,6 +115,12 @@ select {
   min-width: 70px;
 }
 
+td, th {
+  padding: 1px 4px;
+  color: white;
+  font-size: 16px;
+}
+
 .loader {
   margin-top: 50px;
 }
@@ -129,7 +136,6 @@ select {
   padding: 20px;
   margin: 0;
   background: none;
-  /* background-image: url("../images/nasa.jpg"); */
   background-attachment: fixed;
   background-position: bottom center;
   background-size: cover;
@@ -169,7 +175,9 @@ select {
   color: #8e979f;
 }
 
-/* media queries which will only be activated at specific screen sizes */
+/*----------------------MEDIA--------------------------
+media queries which will only be activated at specific screen sizes */
+
 @media (max-width: 800px) {
   #table-area td {
     font-size: 1em;
@@ -222,7 +230,10 @@ select {
   }
 }
 
-/* keyframe animations which will be used to animate the title */
+
+/* --------------BACKGROUND ANIMATIONS-----------------
+keyframe animations which will be used to animate the title */
+
 @keyframes title {
   from {
     opacity: 0;
