@@ -89,8 +89,8 @@ which is pushed to the bottom of the page */
 }
 
 .panel-heading {
-  background-color: black !important;
-  border: 3px  rgb(51, 51, 51) solid !important;
+  background-color: rgb(51, 51, 51) !important;
+  border: 3px black solid !important;
 }
 
 .filters {
@@ -121,6 +121,12 @@ td, th {
   font-size: 16px;
 }
 
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+  background-color: rgb(51, 51, 51) !important;
+  opacity: .8;
+}
+
 .loader {
   margin-top: 50px;
 }
@@ -143,7 +149,7 @@ td, th {
 
 .hero h1 {
   margin-top: 200px;
-  font-size: 0.1rem;
+  font-size: 1.4em;
   animation: title 1.2s forwards linear;
 }
 
@@ -192,7 +198,8 @@ media queries which will only be activated at specific screen sizes */
   #table-area tr td:first-child {
     font-size: 1.8em;
     font-weight: bold;
-    background: #1b3146;
+    background-color: rgb(51, 51, 51) !important;
+    opacity: .75 !important;
   }
 
   #table-area tr td:last-child {
@@ -205,7 +212,8 @@ media queries which will only be activated at specific screen sizes */
     height: 1px;
     margin-top: 20px;
     content: " ";
-    background: aliceblue;
+    background-color: rgb(51, 51, 51) !important;
+    opacity: .75 !important;
   }
 
   #table-area td {
@@ -229,6 +237,7 @@ media queries which will only be activated at specific screen sizes */
     animation: smaller-title 1.2s forwards linear;
   }
 }
+
 
 
 /* --------------BACKGROUND ANIMATIONS-----------------

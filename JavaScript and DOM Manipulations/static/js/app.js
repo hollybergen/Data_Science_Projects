@@ -1,40 +1,35 @@
 // from data.js
-
 // data = [LIST OF {OBJECTS} ]
 
-// var data = [{
-//     datetime: "1/1/2010",
-//     city: "benton",
-//     state: "ar",
-//     country: "us",
-//     shape: "circle",
-//     durationMinutes: "5 mins.",
-//     comments: "4 bright green circles high in the sky going in circles then one bright green light at my front door."
-//   },
 
+
+// Assign variables
   
 var tableData = data;
-// var inputField = d3.select("#input-field");
 var button = d3.select("#click-me");
 var date = d3.select("#date");
-
 var city = d3.select(".city");
-
 
 //-------- Create function to report data from datetime--------//
 
+
   // Input Date
-  date.on("change", function handleChange() { 
-    var inputText = d3.event.target.value;
-    console.log("You entered: " + inputText);
+  button.on("click", function handleChange() { 
+
+    // First clear all table data from previous query
+    d3.selectAll("td").remove();
+
+    // Pull input value 
+    inputText = date.property("value");
 
     // Filter data set for input value based on DATETIME key
     var result = tableData.filter(obj => {
       return obj.datetime === inputText
     });
+   
+    // Clear input value
+    date.property("value", "");
 
-    console.log(result)
-    
     // Define a function to append table based on reports data
     function appendTable(report) {
       var tbody = d3.select("tbody");
@@ -58,9 +53,8 @@ var city = d3.select(".city");
 
       // Call function with output of search
       return result.forEach(appendTable);
+
   });
-
-
 
 
 

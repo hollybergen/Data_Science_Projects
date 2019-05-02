@@ -13,6 +13,9 @@
 
 <body>
 
+    <script src="static/js/data.js"></script>
+    <script src="static/js/app - Copy.js"></script>
+
       <!-------Stars Twinkling Background----------->
       <div class="wrapper">
           <div class="stars">
@@ -46,10 +49,23 @@
                     <div class="panel panel-body">
                       <form>
                         <div class="form-group">
+
                           <ul class=" panel list-group" id="filters">
                             <li class="panel filter list-group-item">
-                              <label for="date">Enter a Date between 1/1/2010 & 1/13/2010</label>
-                              <input class="form-control" id= "date" type="text" placeholder="1/11/2011">
+                              
+                                <!----------DROPDOWN MENU------------>
+                          
+                                  <select name="filterTable" id="filterTable" onchange="getTable(this.value)">
+                                    <option value="dateTime">Date/Time</option>                                 
+                                    <option value="city">City</option>
+                                    <option value="state">State</option>
+                                    <option value="country">Country</option>
+                                    <option value="shape">Shape</option>
+                                </select>
+
+                                  <input class="form-control" id= "inputValue" type="text" placeholder="">
+                                  <label for="dateTime">Label</label>
+
                             </li>
                           </ul>
                         </div>
@@ -93,7 +109,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
   <script src="static/js/data.js"></script>
-  <script src="static/js/app.js"></script>
+  <script src="static/js/app - Copy.js"></script>
 
 </body>
 
