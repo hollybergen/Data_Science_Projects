@@ -3,7 +3,7 @@
 
 ## Level 1: Automatic Table and Date Search ##
 
-**Published Site:** [index.html](https://hollybergen.github.io/UFO-Finder-JavaScript-and-DOM-Manipulations/) <br>
+**Link to Published Site:** [UFO Finder](https://hollybergen.github.io/UFO-Finder-JavaScript-and-DOM-Manipulations/) <br>
 **Link to Published Repository:** https://github.com/hollybergen/UFO-Finder-JavaScript-and-DOM-Manipulations
 
 
@@ -14,3 +14,15 @@
 * Used a [CSS Style Sheet](https://github.com/hollybergen/UFO-Finder-JavaScript-and-DOM-Manipulations/blob/master/static/css/style.css) to format html page
 
 
+## Level 2: Multiple Search Categories ##
+
+**Link to Published Site:** [UFO Finder](https://hollybergen.github.io/UFO-Finder-JavaScript-and-DOM-Manipulations/filtered.html)
+
+* Completed all of Level 1 criteria.
+* Used multiple input tags and/or select dropdowns, write JavaScript code so the user can to set multiple filters and search for UFO sightings using the following criteria based on the table columns:
+
+1. date/time
+2. city
+3. state
+4. country
+5. shape
