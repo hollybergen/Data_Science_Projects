@@ -16,9 +16,10 @@
 
 ## Level 2: Multiple Search Categories ##
 
-**Link to Published Site:** [UFO Finder](https://hollybergen.github.io/UFO-Finder-JavaScript-and-DOM-Manipulations/filtered.html)
+**Link to Published Site:** [UFO Finder Filtered](https://hollybergen.github.io/UFO-Finder-JavaScript-and-DOM-Manipulations/filtered.html)
 
 * Completed all of Level 1 criteria.
+* Created a basic HTML web page [filtered.html](https://github.com/hollybergen/UFO-Finder-JavaScript-and-DOM-Manipulations/blob/master/filtered.html)
 * Used multiple input tags and/or select dropdowns, write JavaScript code so the user can to set multiple filters and search for UFO sightings using the following criteria based on the table columns:
 
 1. date/time
