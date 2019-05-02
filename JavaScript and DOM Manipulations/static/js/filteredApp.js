@@ -1,8 +1,3 @@
-// from data.js
-// data = [LIST OF {OBJECTS} ]
-
-
-
 // Assign variables
   
 var tableData = data;
@@ -10,14 +5,8 @@ var button = d3.select("#click-me");
 var inputValue = d3.select("#inputValue");
 var dropdown = d3.select("#filterTable")
 
-// var button = d3.select("#click-me");
-// var inputValue = d3.select("#inputValue");
-// var city = d3.select(".city");
-
 //-------- Create function to report data from datetime--------//
 
-
-// function init() {
 
 // Define a function to append table based on reports data
 function appendTable(report) {
@@ -40,25 +29,25 @@ function appendTable(report) {
   });
 }
 
-// Display the entire dataset as default
-// tableData.forEach(appendTable);
-
-
+// Create function to pass in dropdown values, filter table data, and return appended table
 function getTable(filterArg) { 
 
-// d3.event.preventDefault()
+// Create variable to be passed into switch statement, based on input
 var filterArg = dropdown.property("value");
-console.log("are we passing filter arg:", filterArg)
+console.log("We are passing filter arg:", filterArg)
 inputText = inputValue.property("value");
-console.log("are we passing inputText:", inputText) 
+console.log("We are passing inputText:", inputText) 
 
+// Prevent the page from refreshing
+d3.event.preventDefault();
+
+// Create switch statement to filter data set based on dropdown value
 switch (filterArg) {   
   case "dateTime":
-    // Filter data set for input value based on DATETIME key
-    var result = tableData.filter(obj => {
-      return obj.datetime == inputText
-    });
-    console.log(result);
+      var result = tableData.filter(obj => {
+        return obj.datetime == inputText
+      });
+      console.log(result);
     break;
 
   case "city":
@@ -90,32 +79,20 @@ switch (filterArg) {
       break;
     
   default:
-      var result = tableData.filter(obj => {
-        return obj.datetime == inputText
-      });
-      console.log(result);
+      console.log("None Found");
       break;
-    
-    console.log("none")
-    break;
   }  
 
-  // console.log("are we passing filter result:", result)
-
-    // First clear all table data from previous query
+    // Clear all table data from previous query
     d3.selectAll("td").remove();
 
-    // Pull input value 
-   
-
-    // Clear input value
+    // Clear input value from previous query
     inputValue.property("value", "");
 
+    // Return results from filter argument & use function to append table
     return result.forEach(appendTable);
   }
 
-  //  result.forEach(appendTable);
 
 // Add event listener for submit button
 d3.select("#click-me").on("click", getTable);
-
