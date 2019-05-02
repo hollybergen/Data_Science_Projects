@@ -1,9 +1,9 @@
-# Unit 14 | Assignment - JavaScript and DOM Manipulation #
+# UFO Finder - JavaScript and DOM Manipulation #
 
 
 ## Level 1: Automatic Table and Date Search ##
 
-**Published Site:** [index.html](https://hollybergen.github.io/UFO-Finder-JavaScript-and-DOM-Manipulations/)
+**Published Site:** [index.html](https://hollybergen.github.io/UFO-Finder-JavaScript-and-DOM-Manipulations/) <br>
 **Link to Published Repository:** https://github.com/hollybergen/UFO-Finder-JavaScript-and-DOM-Manipulations
 
 
